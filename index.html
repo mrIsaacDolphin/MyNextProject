@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>MyNextProject</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <section class="project-table-wrapper">
+            <h1>Projects</h1>
+            <input type="text" class="searchTable" id="searchTable" onkeyup="searchTable()" placeholder="Search by project name...">
+            <table class="project-table" id="project-table">
+                <tr class="project-table-header">
+                    <th class="project-table-heading" style="width:40%;">Name</th>
+                    <th class="project-table-heading" style="width:30%;">Type</th>
+                    <th class="project-table-heading" style="width:10%;">Download</th>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Berglunds Snabbkop</td>
+                    <td>Sweden</td>
+                </tr>
+                <tr>
+                    <td>Island Trading</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>Koniglich Essen</td>
+                    <td>Germany</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <!-- Script Imports -->
+    <script src="/scripts/project-table.js"></script>
+</body>
+</html>
