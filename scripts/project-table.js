@@ -1,13 +1,12 @@
 function searchTable() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchTable");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("project-table");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
+    var input = document.getElementById("searchSoftwareProjectsTable");
+    var filter = input.value.toUpperCase();
+    var table = document.getElementById("softwareProjectsTable");
+    var tr = table.getElementsByTagName("tr");
+    for (var i = 0; i < tr.length; i++) {
+        var td = tr[i].getElementsByTagName("td")[0];
         if (td) {
-            txtValue = td.textContent || td.innerText;
+            var txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 tr[i].style.display = "";
             } 

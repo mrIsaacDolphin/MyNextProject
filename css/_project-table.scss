@@ -1,22 +1,24 @@
-.searchTable {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px;
-    border: 1px solid #ddd;
-    /* Top Right Bottom Left */
-    margin: 15px 0px 15px 0px;
-}
-.project-table-wrapper {
-    .project-table {
+#mnp-software-projects-table {
+    .mnp-c-table-search {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+        border: 1px solid #DDDDDD;
+        margin: 15px 0px 15px 0px;
+    }
+    .mnp-c-table-search:focus {
+        outline: none;
+    }
+    .mnp-c-table {
         border-collapse: collapse;
         width: 100%;
         font-size: 16px;
-        .project-table-heading, td {
+        .mnp-c-table-header {
+            background-color: #f0f0f0;
+        }
+        .mnp-c-table-heading, td {
             text-align: left;
             padding: 12px;
-        }
-        .project-table-header {
-            background-color: #f0f0f0;
         }
         tr {
             border-bottom: 1px solid #ddd;

@@ -4,40 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/app.css">
     <title>MyNextProject</title>
 </head>
 <body>
-    <div class="page-wrapper">
-        <section class="project-table-wrapper">
-            <h1>Projects</h1>
-            <input type="text" class="searchTable" id="searchTable" onkeyup="searchTable()" placeholder="Search by project name...">
-            <table class="project-table" id="project-table">
-                <tr class="project-table-header">
-                    <th class="project-table-heading" style="width:40%;">Name</th>
-                    <th class="project-table-heading" style="width:30%;">Type</th>
-                    <th class="project-table-heading" style="width:10%;">Download</th>
+    <div class="mnp-page-wrapper">
+        <section class="mnp-navigation-wrapper">
+            <nav class="mnp-c-navigation-bar">
+                <img src="placeholder.png" alt="MyNextProject Logo">
+                <div class="mnp-c-navigation-bar-toggle" id="navigationBarMobileMenu">
+                    <span class="mnp-c-navigation-slab"></span>
+                    <span class="mnp-c-navigation-slab"></span>
+                    <span class="mnp-c-navigation-slab"></span>                    
+                </div>
+                <ul class="mnp-c-navigation-cluster">
+                    <li class="mnp-c-navigation-item">
+                        <a href="#">test</a>
+                    </li>
+                    <li class="mnp-c-navigation-item">
+                        <a href="#">test</a>
+                    </li>
+                    <li class="mnp-c-navigation-item">
+                        <a href="#">test</a>
+                    </li>
+                    <li class="mnp-c-navigation-item">
+                        <a href="#">test</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section id="mnp-software-projects-table">
+            <h1>Software Projects</h1>
+            <input class="mnp-c-table-search" type="text" id="searchSoftwareProjectsTable" onkeyup="searchTable()" placeholder="Search table by project name...">
+            <table class="mnp-c-table" id="softwareProjectsTable">
+                <tr class="mnp-c-table-header">
+                    <th class="mnp-c-table-heading" style="width:34%;">Name</th>
+                    <th class="mnp-c-table-heading" style="width:33%;">Type</th>
+                    <th class="mnp-c-table-heading" style="width:33%;">Download PDF</th>
                 </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Germany</td>
-                </tr>
-                <tr>
-                    <td>Berglunds Snabbkop</td>
-                    <td>Sweden</td>
-                </tr>
-                <tr>
-                    <td>Island Trading</td>
-                    <td>UK</td>
-                </tr>
-                <tr>
-                    <td>Koniglich Essen</td>
-                    <td>Germany</td>
-                </tr>
+                <tbody class="mnp-c-table-body" id="softwareProjectsTableBody">
+                    
+                </tbody>
             </table>
         </section>
     </div>
     <!-- Script Imports -->
     <script src="/scripts/project-table.js"></script>
+    <script src="/scripts/data/softwareProjectsData.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.mnp-c-navigation-bar-toggle').click(function(){
+            $(".mnp-c-navigation-cluster").toggleClass("mobile-nav");
+            $(this).toggleClass("is-active");
+        });
+    </script>
 </body>
 </html>

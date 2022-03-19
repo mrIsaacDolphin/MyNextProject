@@ -1,0 +1,96 @@
+/* https://codepen.io/bowersrd/pen/dwXLba?editors=1100 */
+.mnp-navigation-wrapper {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    .mnp-c-navigation-bar {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+        height: 50px;
+        overflow: hidden;
+        img {
+            height: 16px;
+            width: auto;
+            justify-self: start;
+            margin-left: 20px;
+        }
+        #navigationBarMobileMenu.is-active {
+            .mnp-c-navigation-slab:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .mnp-c-navigation-slab:nth-child(2) {
+                opacity: 0;
+            }
+            .mnp-c-navigation-slab:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+        .mnp-c-navigation-bar-toggle {
+            justify-self: end;
+            margin-right: 25px;
+            display: none;
+            .mnp-c-navigation-slab {
+                width: 25px;
+                height: 3px;
+                background-color: #3f3f3f;
+                margin: 5px auto;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        .mnp-c-navigation-bar-toggle:hover {
+            cursor: pointer;
+        }
+        .mnp-c-navigation-cluster {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            justify-self: end;
+            a { 
+                color: #000000;
+                font-size: 0.9rem;
+                font-weight: 400;
+                text-decoration: none;
+                transition: color 0.3s ease-out;
+            }
+            a:hover {
+                color: #3498db;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .mnp-c-navigation-bar-toggle {
+        .mnp-c-navigation-slab {
+            display: block;
+            cursor: pointer;
+        }
+    }
+    .mnp-c-navigation-cluster {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        justify-content: start;
+        top: 55px;
+        background-color: #FFFFFF;
+        width: 100%;
+        height: calc(100vh - 55px);
+        transform: translate(-101%);
+        text-align: center;
+        overflow: hidden;
+        .mnp-c-navigation-item {
+            padding: 15px;
+            a { 
+                font-size: 1rem;
+            }
+        }
+        .mnp-c-navigation-item:first-child {
+            margin-top: 50px;
+        }
+    }
+    .mobile-nav {
+        transform: translate(0%) !important;
+    }
+}
